@@ -3,8 +3,14 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-Vue.config.productionTip = false;
+// 可以引入整个 Element
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import VueCompositionApi from '@vue/composition-api'; 
+Vue.use(ElementUI);
+Vue.use(VueCompositionApi);
 
+Vue.config.productionTip = false;
 new Vue({
   router,
   store,
